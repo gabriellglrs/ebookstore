@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -22,14 +23,16 @@ public class Review implements Serializable {
 
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
-     private Long id;
+     private UUID id;
+
+     @Column(nullable = false)
      private String comment;
 
      @OneToOne
      @MapsId
      private Book book;
 
-     public Review(Long id, String comment, Book book) {
+     public Review(UUID id, String comment, Book book) {
           this.id = id;
           this.comment = comment;
           this.book = book;

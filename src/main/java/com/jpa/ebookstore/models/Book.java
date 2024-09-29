@@ -10,6 +10,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -24,7 +25,9 @@ public class Book implements Serializable {
 
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
-     private Long id;
+     private UUID id;
+
+     @Column(nullable = false, unique = true)
      private String title;
 
      @ManyToOne
@@ -42,7 +45,7 @@ public class Book implements Serializable {
      private Review review;
 
 
-     public Book(Long id, String title, Publisher publisher, Review review) {
+     public Book(UUID id, String title, Publisher publisher, Review review) {
           this.id = id;
           this.title = title;
           this.publisher = publisher;

@@ -10,6 +10,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -24,13 +25,15 @@ public class Author implements Serializable {
 
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
-     private Long id;
+     private UUID id;
+
+     @Column(nullable = false, unique = true)
      private String name;
 
      @ManyToMany(mappedBy = "authors")
      private Set<Book> books = new HashSet<>();
 
-     public Author(Long id, String name) {
+     public Author(UUID id, String name) {
           this.id = id;
           this.name = name;
      }

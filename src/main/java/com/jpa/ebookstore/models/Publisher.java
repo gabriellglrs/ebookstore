@@ -10,6 +10,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -24,13 +25,15 @@ public class Publisher implements Serializable {
 
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
-     private Long id;
+     private UUID id;
+
+     @Column(nullable = false, unique = true)
      private String nome;
 
-     @OneToMany(mappedBy = "publisher")
+     @OneToMany(mappedBy = "publisher", fetch = FetchType.LAZY)
      private Set<Book> books = new HashSet<>();
 
-     public Publisher(Long id, String nome) {
+     public Publisher(UUID id, String nome) {
           this.id = id;
           this.nome = nome;
      }
