@@ -61,6 +61,7 @@ docker-compose up --build
 ````
 
 ### Executando localmente
+- Instale o Java JDK 21
 - Instale o PostgreSQL e configure o banco de dados conforme especificado no arquivo application.properties.
 
 Compile e rode a aplicação usando Maven:
