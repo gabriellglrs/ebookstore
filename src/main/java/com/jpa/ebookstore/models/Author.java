@@ -17,7 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity
-@Table(name = "tb_author")
+@Table(name = "TB_AUTHOR")
 public class Author implements Serializable {
 
      @Serial

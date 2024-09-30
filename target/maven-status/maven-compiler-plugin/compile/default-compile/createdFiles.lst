@@ -1,0 +1,5 @@
+com\jpa\ebookstore\models\Book.class
+com\jpa\ebookstore\models\Publisher.class
+com\jpa\ebookstore\models\Author.class
+com\jpa\ebookstore\models\Review.class
+com\jpa\ebookstore\EbookstoreApplication.class
