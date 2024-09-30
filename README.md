@@ -48,7 +48,7 @@ Com o Docker Compose, a aplicação e o banco de dados serão configurados autom
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
+   git clone https://github.com/gabriellglrs/ebookstore.git
    cd nome-do-projeto
    ````
  2. Execute o seguinte comando para iniciar a aplicação e o banco de dados:
