@@ -1,6 +1,6 @@
 <img src="./img/banner github.png"/> <br><br>
 
-# Book Management API
+# BookStore Management API
 
 Este projeto é uma API para gerenciamento de livros, autores, editoras e reviews. Foi construída usando **Java 21**, **Spring Data JPA**, **Spring Web**, **Lombok**, **PostgreSQL** e **Docker**.
 
@@ -29,10 +29,9 @@ Este projeto é uma API para gerenciamento de livros, autores, editoras e review
   - **Docker Compose**: Para orquestração dos containers.
 
 ## Diagrama Entidade-Relacionamento (ERD)
+![image](https://github.com/user-attachments/assets/41026058-f7a8-4c8f-8e3b-81e0f9213e65)
 
-![Diagrama ERD](./path/to/your/diagram.png)
-
-O diagrama acima descreve o relacionamento entre as seguintes entidades:
+### O diagrama acima descreve o relacionamento entre as seguintes entidades:
 - **Book** (Livro) possui uma relação *many-to-many* com **Author** (Autor), *one-to-many* com **Publisher** (Editora), e uma relação *one-to-one* com **Review** (Avaliação).
 
 ## Pré-requisitos
